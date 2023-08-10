@@ -2,7 +2,7 @@
 	import '../app.css';
 	import { questionsEn, questionsTH } from '../stores';
 
-	let lang = 'en';
+	let lang = 'th';
 </script>
 
 <div class="w-full h-[100dvh] space-y-5 flex flex-col justify-center items-center">
@@ -12,7 +12,7 @@
 		<button class="text-2xl hover:underline hover:text-MainGreen" on:click={() => (lang = 'en')}>EN</button>
 	</div>
 
-	<div class="w-30 h-30">
+	<div class="w-20 h-20 laptop:w-40 laptop:h-40">
 		<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.69 190.5"
 			><g transform="translate(1184.583 765.171)"
 				><path clip-path="none" mask="none" d="M-1089.333-687.239v36.888h51.262c-2.251 11.863-9.006 21.908-19.137 28.662l30.913 23.986c18.011-16.625 28.402-41.044 28.402-70.052 0-6.754-.606-13.249-1.732-19.483z" fill="#4285f4" /><path
@@ -29,21 +29,21 @@
 			></svg
 		>
 	</div>
-	<h1 class="text-6xl">Google GDSC</h1>
-	<p class="text-2xl text-green-500">Google Developer Student Clubs</p>
+	<h1 class="text-2xl laptop:text-6xl">Google GDSC</h1>
+	<p class="text-lg laptop:text-2xl text-green-500">Google Developer Student Clubs</p>
 
 	{#if lang === 'en'}
 		{#each questionsEn as question}
 			<div class="w-full h-20 grid grid-cols-2">
-				<h1 class="text-4xl">{question.question}</h1>
-				<p class="text-2xl">{question.answers}</p>
+				<h1 class="text-xl laptop:text-4xl">{question.question}</h1>
+				<p class="text-lg laptop:text-2xl">{question.answers}</p>
 			</div>
 		{/each}
 	{:else}
 		{#each questionsTH as question}
 			<div class="w-full h-20 grid grid-cols-2">
-				<h1 class="text-4xl">{question.question}</h1>
-				<p class="text-2xl">{question.answers}</p>
+				<h1 class="text-xl laptop:text-4xl">{question.question}</h1>
+				<p class="text-lg laptop:text-2xl">{question.answers}</p>
 			</div>
 		{/each}
 	{/if}

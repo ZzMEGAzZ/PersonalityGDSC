@@ -1,7 +1,5 @@
-interface Question {
-    question: string;
-    answers: string[];
-}
+// import { writable } from 'svelte/store';
+import type { Question } from './types';
 
 const questionsEn: Question[] = [
 	{
