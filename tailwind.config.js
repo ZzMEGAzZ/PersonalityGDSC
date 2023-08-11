@@ -17,6 +17,9 @@ export default {
       MainBlack: '#000000',
       MainWhite: '#FFFFFF',
       MainGray: '#F5F5F5',
+      LowPink: '#FFCDD2',
+      LowYellow: '#FFFBE1',
+      LowBlue: '#BBDEFB',
     }
   },
   plugins: [],

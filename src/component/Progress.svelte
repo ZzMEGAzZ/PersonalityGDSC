@@ -10,9 +10,9 @@
     
     $: console.log(step);
     
-    </script> -->
+    </script> 
     
-<!-- <div>
+<div>
       <div class="flex flex-row justify-around">
       {#each Array(questionLen) as _, i}
         <button on:click={() => chooseStep(i)} class={`${i <= step ? 'bg-MainGreen' : ''} border-2 border-MainBlue w-5 h-5 rounded-full`}></button>
