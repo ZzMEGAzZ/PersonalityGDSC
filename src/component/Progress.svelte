@@ -1,6 +1,7 @@
 <script>
     export let step = 0;
     export let questionLen = 0;
+
 </script>
 
 <div>

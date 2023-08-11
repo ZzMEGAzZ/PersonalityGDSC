@@ -1,10 +1,13 @@
-<script>
+<script lang=ts>
 	import '../app.css';
 	import QuestionFrom from '../component/QuestionFrom.svelte';
 	import GdscSVG from '../Assets/SVG/gdscSVG.svelte';
+	import Main from '../component/Main.svelte';
+	import Consent from '../component/Consent.svelte';
+	import Intro from '../component/Intro.svelte';
+	import {mode} from '../stores';
 
 	let lang = 'en' || 'th';
-	
 </script>
 
 <div class="w-full h-[100dvh] space-y-5 flex flex-col justify-center items-center">
@@ -17,8 +20,13 @@
 	<div class="w-20 h-20 mobile:w-40 mobile:h-40 laptop:w-60 laptop:h-60 transition-all duration-1000">
 		<GdscSVG />
 	</div>
-
-	<QuestionFrom {lang}/>
-
-
+	{#if $mode == 'main'}
+		<Main {lang} />
+	{:else if $mode == 'consent'}
+		<Consent {lang} />
+	{:else if $mode == 'intro'}
+		<Intro {lang} />
+	{:else}
+		<QuestionFrom {lang} />
+	{/if}
 </div>

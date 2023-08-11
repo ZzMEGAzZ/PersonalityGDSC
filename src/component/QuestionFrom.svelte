@@ -1,6 +1,7 @@
 <script>
 	import Progress from './Progress.svelte';
 	import { questionsEn, questionsTH } from '../stores';
+	import { mode } from '../stores';
 
 	export let lang = 'en' || 'th';
 
@@ -43,7 +44,11 @@
 		{/if}
 	</div>
 	<div>
-		<button class="text-2xl laptop:text-4xl hover:underline hover:text-MainGreen" on:click={prev}>Prev</button>
+		{#if step == 0}
+			<button class="text-2xl laptop:text-4xl hover:underline hover:text-MainGreen" on:click={() => ($mode = 'intro')}>Prev</button>
+		{:else}
+			<button class="text-2xl laptop:text-4xl hover:underline hover:text-MainGreen" on:click={prev}>Prev</button>
+		{/if}
 		{step}
 		<button class="text-2xl laptop:text-4xl hover:underline hover:text-MainGreen" on:click={next}>Next</button>
 	</div>
