@@ -1,8 +1,10 @@
 <script>
-	import Progress from './Progress.svelte';
-	import { questionsEn, questionsTH } from '../stores';
 
-	export let lang = 'en' || 'th';
+	import { questionsEn, questionsTH } from '../stores';
+	
+	
+
+	export let lang = 'en' || 'th'
 
 	const questionLen = questionsEn.length;
 	let step = 0;
@@ -19,11 +21,23 @@
 			step = 0;
 		}
 	}
+
+	function chooseStep(i) {
+      step = i;
+    }
+
+
+	
 </script>
 
 <div>
 	<div class="h-10">
-		<Progress {questionLen} {step} />
+		<div>
+			<div class="flex flex-row justify-around">
+			{#each Array(questionLen) as _, i}
+			  <button on:click={() => chooseStep(i)} class={`${i <= step ? 'bg-MainGreen' : ''} border-2 border-MainBlue w-5 h-5 rounded-full`}></button>
+			{/each}</div>
+	  </div>
 	</div>
 	<div class="w-full h-40 grid grid-rows-2 justify-items-center">
 		{#if lang === 'en'}

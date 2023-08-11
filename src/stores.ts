@@ -1,6 +1,8 @@
 // import { writable } from 'svelte/store';
 import type { Question } from './types';
 
+
+
 const questionsEn: Question[] = [
 	{
 		question: 'Which activity do you enjoy the most ?',
