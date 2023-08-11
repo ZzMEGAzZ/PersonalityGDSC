@@ -62,7 +62,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class=" mt-20 flex justify-center items-center space-x-5 laptop:space-x-8">
+	<div class=" mt-24 flex justify-center items-center space-x-5 laptop:space-x-8">
 		<button class="text-sm laptop:text-4xl laptop:w-[150px] laptop:h-[50px]   bg-MainWhite border-MainWhite border w-[60px] h-[30px] rounded-md" on:click={prev}>Previous</button>
 		<button class=" laptop:text-4xl laptop:w-[150px] laptop:h-[50px]  bg-MainRed text-MainWhite  w-[60px] h-[30px] text-sm rounded-md duration-300" on:click={next}>Next</button>
 	</div>
