@@ -48,9 +48,9 @@
 		{#if lang === 'en'}
 			<h1 class="text-xl laptop:text-4xl mb-3">{questionsEn[step].question}</h1>
 			<div class="flex flex-col space-y-5">
-				<button  class="text-lg laptop:text-2xl text-start  border-MainWhite border rounded-lg">A. {questionsEn[step].answers[0]}</button>
-				<button class="text-lg laptop:text-2xl text-start border-MainWhite border rounded-lg">B. {questionsEn[step].answers[1]}</button>
-				<button class="text-lg laptop:text-2xl text-start  border-MainWhite border rounded-lg">C. {questionsEn[step].answers[2]}</button>
+				<button  class="text-lg laptop:text-2xl text-start  border-MainWhite border rounded-lg h-12">A. {questionsEn[step].answers[0]}</button>
+				<button class="text-lg laptop:text-2xl text-start border-MainWhite border rounded-lg h-12">B. {questionsEn[step].answers[1]}</button>
+				<button class="text-lg laptop:text-2xl text-start  border-MainWhite border rounded-lg h-12">C. {questionsEn[step].answers[2]}</button>
 			</div>
 		{:else}
 			<h1 class="text-xl laptop:text-4xl mb-3 ">{questionsTH[step].question}</h1>
