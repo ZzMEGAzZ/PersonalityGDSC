@@ -3,6 +3,20 @@
 	import { questionsEn, questionsTH } from '../stores';
 
 	let lang = 'th';
+
+	let step = 0;
+	function next() {
+		if (step < questionsEn.length - 1) {
+			step += 1;
+		}
+	}
+	function prev() {
+		if (step > 0) {
+			step -= 1;
+		} else {
+			step = 0;
+		}
+	}
 </script>
 
 <div class="w-full h-[100dvh] space-y-5 flex flex-col justify-center items-center">
@@ -26,25 +40,31 @@
 					clip-path="none"
 					mask="none"
 				/></g
-			></svg
-		>
+			>
+		</svg>
 	</div>
 	<h1 class="text-2xl laptop:text-6xl">Google GDSC</h1>
 	<p class="text-lg laptop:text-2xl text-green-500">Google Developer Student Clubs</p>
-
-	{#if lang === 'en'}
-		{#each questionsEn as question}
-			<div class="w-full h-20 grid grid-cols-2">
-				<h1 class="text-xl laptop:text-4xl">{question.question}</h1>
-				<p class="text-lg laptop:text-2xl">{question.answers}</p>
+	<div class="w-full h-40 grid grid-rows-2 justify-items-center">
+		{#if lang === 'en'}
+			<h1 class="text-xl laptop:text-4xl">{questionsEn[step].question}</h1>
+			<div>
+				<p class="text-lg laptop:text-2xl">{questionsEn[step].answers[0]}</p>
+				<p class="text-lg laptop:text-2xl">{questionsEn[step].answers[1]}</p>
+				<p class="text-lg laptop:text-2xl">{questionsEn[step].answers[2]}</p>
 			</div>
-		{/each}
-	{:else}
-		{#each questionsTH as question}
-			<div class="w-full h-20 grid grid-cols-2">
-				<h1 class="text-xl laptop:text-4xl">{question.question}</h1>
-				<p class="text-lg laptop:text-2xl">{question.answers}</p>
+		{:else}
+			<h1 class="text-xl laptop:text-4xl">{questionsTH[step].question}</h1>
+			<div>
+				<p class="text-lg laptop:text-2xl">{questionsTH[step].answers[0]}</p>
+				<p class="text-lg laptop:text-2xl">{questionsTH[step].answers[1]}</p>
+				<p class="text-lg laptop:text-2xl">{questionsTH[step].answers[2]}</p>
 			</div>
-		{/each}
-	{/if}
+		{/if}
+	</div>
+	<div>
+		<button class="text-2xl laptop:text-4xl hover:underline hover:text-MainGreen" on:click={prev}>Prev</button>
+		{step}
+		<button class="text-2xl laptop:text-4xl hover:underline hover:text-MainGreen" on:click={next}>Next</button>
+	</div>
 </div>
