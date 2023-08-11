@@ -2,7 +2,7 @@
 	import '../app.css';
 	import { questionsEn, questionsTH } from '../stores';
 
-	let lang = 'th';
+	let lang = 'en' || 'th';
 
 	let step = 0;
 	function next() {
