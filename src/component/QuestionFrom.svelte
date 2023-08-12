@@ -37,6 +37,7 @@
 		{:else}
 			<h1 class="text-xl laptop:text-4xl">{questionsTH[step].question}</h1>
 			<div>
+				<!-- test -->
 				<p class="text-lg laptop:text-2xl text-start">{questionsTH[step].answers[0]}</p>
 				<p class="text-lg laptop:text-2xl text-start">{questionsTH[step].answers[1]}</p>
 				<p class="text-lg laptop:text-2xl text-start">{questionsTH[step].answers[2]}</p>
