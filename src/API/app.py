@@ -99,11 +99,6 @@ def new_user():
 
     with get_db_connection() as conn:
         cursor = conn.cursor()
-        cursor.execute("SELECT COUNT(*) FROM users WHERE name = %s", (name,))
-        fetched = cursor.fetchone()
-        existing_user = fetched[0] if fetched else None
-        if existing_user:
-            return "User already exists", 400
 
 
         cursor.execute(
