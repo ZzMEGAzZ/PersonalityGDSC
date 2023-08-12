@@ -1,20 +1,15 @@
-<!-- <script>
-    // @ts-nocheck
-    export let step = 0;
+<script>
+    import {step } from '../stores';
+    $step = 0;
     export let questionLen = 0;
-    
-    
-    function chooseStep(i) {
-      step = i;
-    }
-    
-    $: console.log(step);
-    
-    </script> 
-    
+
+</script>
+
 <div>
-      <div class="flex flex-row justify-around">
-      {#each Array(questionLen) as _, i}
-        <button on:click={() => chooseStep(i)} class={`${i <= step ? 'bg-MainGreen' : ''} border-2 border-MainBlue w-5 h-5 rounded-full`}></button>
-      {/each}</div>
-</div> -->
+    <div class="flex flex-row justify-around">
+    {#each Array(questionLen) as _, i}
+        <button class={`${i <= $step ? 'bg-MainGreen' : ''} border-2 border-MainBlue w-5 h-5 rounded-full`}
+        on:click={ () => $step = i}>
+        </button>
+    {/each}</div>
+</div>

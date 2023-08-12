@@ -1,7 +1,9 @@
 // import { writable } from 'svelte/store';
+import { writable } from 'svelte/store';
 import type { Question } from './types';
 
-
+export const mode = writable('');
+export const step = writable(0);
 
 const questionsEn: Question[] = [
 	{
