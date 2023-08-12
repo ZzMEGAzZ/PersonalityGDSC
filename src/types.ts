@@ -3,6 +3,12 @@ interface Question {
     answers: string[];
 }
 
+interface Answer {
+    name: string;
+    answers: string[];
+}
+    
 export type {
-    Question
+    Question,
+    Answer
 }
