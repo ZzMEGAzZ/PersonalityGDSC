@@ -4,6 +4,7 @@ import type { Question } from './types';
 
 export const mode = writable('');
 export const step = writable(0);
+export const name = writable('');
 export const answers = writable([]);
 
 const questionsEn: Question[] = [

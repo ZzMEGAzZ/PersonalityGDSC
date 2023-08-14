@@ -27,9 +27,6 @@
 	{:else if $mode == 'intro'}
 		<Intro {lang} />
 	{:else}
-		<div>
-			<h1 class="text-4xl font-bold">{$step + 1}</h1>
-		</div>
 		<QuestionFrom {lang} />
 	{/if}
 </div>

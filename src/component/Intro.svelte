@@ -5,7 +5,7 @@
 	let next = false;
 </script>
 
-<div
+<!-- <div
 	style="
 	background-image: url({Ribbin});
 	background-repeat: no-repeat;
@@ -13,7 +13,7 @@
 	background-position: center;
 	"
 	class="-z-50 fixed w-full h-[100dvh] space-y-5 flex flex-col justify-center items-center"
-/>
+/> -->
 
 <div class="relative w-full h-40 flex flex-col items-center justify-center space-y-5 p-5">
 	{#if next == false}

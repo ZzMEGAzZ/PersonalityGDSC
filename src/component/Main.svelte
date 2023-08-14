@@ -1,8 +1,7 @@
 <script lang="ts">
 	import GdscSVG from '../Assets/SVG/gdscSVG.svelte';
-	import { mode } from '../stores';
+	import { mode, name } from '../stores';
 	export let lang = 'en' || 'th';
-	export let name = '';
 </script>
 
 <div class="relative w-full h-40 flex flex-col items-center justify-center space-y-5">
@@ -15,12 +14,12 @@
 			<div class="w-full h-full kanit flex flex-col items-center justify-center space-y-2">
 				<h1 class="text-xl tablet:text-4xl font-bold">ถ้าคุณทำงานสายเทค คุณคือตำแหน่งใด</h1>
 				<h2 class="text-lg tablet:text-3xl">อยากให้เราเรียกคุณว่าอะไร?</h2>
-				<input class="border-4 w-[90dvw] tablet:w-[50dvw] h-10 tablet:h-16 p-2 border-MainBlue rounded-xl text-lg tablet:text-2xl" bind:value={name} placeholder="ใส่ชื่อของคุณ" />
+				<input class="border-4 w-[90dvw] tablet:w-[50dvw] h-10 tablet:h-16 p-2 border-MainBlue rounded-xl text-lg tablet:text-2xl" bind:value={$name} placeholder="ใส่ชื่อของคุณ" />
 			</div>
 		{:else}
 			<h1 class="text-xl tablet:text-4xl font-bold">what are your position in tech ?</h1>
 			<h2 class="text-lg tablet:text-3xl">what do you want me to call you ?</h2>
-			<input class="border-4 w-[90dvw] tablet:w-[50dvw] h-10 tablet:h-16 p-2 border-MainBlue rounded-xl text-lg tablet:text-2xl" bind:value={name} placeholder="Please enter your Name" />
+			<input class="border-4 w-[90dvw] tablet:w-[50dvw] h-10 tablet:h-16 p-2 border-MainBlue rounded-xl text-lg tablet:text-2xl" bind:value={$name} placeholder="Please enter your Name" />
 		{/if}
 	</div>
 
