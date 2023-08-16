@@ -25,5 +25,5 @@
 		{/if}
 	</div>
 
-	<button class="text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2" on:click={() => ($mode = 'consent')}>{$lang === 'en' ? 'Next' : 'ถัดไป'}</button>
+	<button class={`${$name.length <= 3 && 'hidden'} text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2`} on:click={() => ($mode = 'consent')}>{$lang === 'en' ? 'Next' : 'ถัดไป'}</button>
 </div>
