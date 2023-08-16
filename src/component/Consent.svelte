@@ -1,7 +1,6 @@
 <script lang="ts">
 	import GdscSVG from '../Assets/SVG/gdscSVG.svelte';
-	import { mode } from '../stores';
-	export let lang = 'en' || 'th';
+	import { mode, lang } from '../stores';
 	let yes = false;
 </script>
 
@@ -10,7 +9,7 @@
 		<GdscSVG />
 	</div>
 	<div class="p-5 flex flex-col justify-center items-center space-y-5">
-		{#if lang == 'th'}
+		{#if $lang == 'th'}
 			<div class="w-full h-full kanit">
 				<p class="text-2xl tablet:4xl text-center leading-10">แบบทดสอบนี้ไม่ได้มีผลวิจัยหรือผลวิชาการรองรับ เป็นเพียงแบบทดสอบที่จัดขึ้นเพื่อความบันเทิง และถูกใช้ในงานวันเปิดโลกกิจกรรม มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต ของซุ้ม Google Developer Student Club เท่านั้น ไม่อนุญาตให้นำไปใช้หรืออ้างอิงในกิจกรรมอื่นทั้งสิ้น</p>
 			</div>
@@ -25,5 +24,5 @@
 			</div>
 		{/if}
 	</div>
-	<button disabled={!yes} class="text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2" on:click={() => ($mode = 'intro')}>{lang === 'en' ? 'Next' : 'ถัดไป'}</button>
+	<button disabled={!yes} class="text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2" on:click={() => ($mode = 'intro')}>{$lang === 'en' ? 'Next' : 'ถัดไป'}</button>
 </div>

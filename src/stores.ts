@@ -2,10 +2,11 @@
 import { writable } from 'svelte/store';
 import type { Question } from './types';
 
-export const mode = writable('');
+export const mode = writable('main' || 'consent' || 'intro' || 'question' );
 export const step = writable(0);
 export const name = writable('');
 export const answers = writable([]);
+export const lang = writable('th' || 'en')
 
 const questionsEn: Question[] = [
 	{
