@@ -5,7 +5,7 @@
 </script>
 
 <Header />
-<div class="relative w-full h-40 flex flex-col items-center justify-center space-y-5">
+<div class="relative w-full h-full flex flex-col items-center justify-center space-y-5">
 	
 	<div class="w-20 h-20 mobile:w-60 mobile:h-40 tablet:w-80 tablet:h-60 transition-all duration-1000">
 		<GdscSVG />
