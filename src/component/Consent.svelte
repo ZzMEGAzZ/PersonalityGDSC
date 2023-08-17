@@ -15,7 +15,7 @@
 			</div>
 			<div class="flex space-x-5 justify-center items-center">
 				<input class="w-7 h-7" type="checkbox" bind:checked={yes} />
-				<h1 class="text-2xl tablet:4xl">รับทราบ</h1>
+				<h1 class="kanit text-2xl tablet:4xl">รับทราบ</h1>
 			</div>
 		{:else}<p class="text-2xl tablet:4xl text-center leading-10">This test is not supported by research or academic results. It is just a test organized for entertainment purposes. And used in the open day event Thammasat University Rangsit Center Google Developer Student Club booth only Do not allow to use or refer to other activities at all.</p>
 			<div class="flex space-x-5">
@@ -24,5 +24,5 @@
 			</div>
 		{/if}
 	</div>
-	<button disabled={!yes} class="text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2" on:click={() => ($mode = 'intro')}>{$lang === 'en' ? 'Next' : 'ถัดไป'}</button>
+	<button disabled={!yes} class="kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2" on:click={() => ($mode = 'intro')}>{$lang === 'en' ? 'Next' : 'ถัดไป'}</button>
 </div>

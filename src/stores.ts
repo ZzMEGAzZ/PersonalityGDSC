@@ -5,20 +5,22 @@ import type { Question, SendResult } from './types';
 export const mode = writable('main' || 'consent' || 'intro' || 'question' || 'result');
 export const step = writable(0);
 export const name = writable('');
-export const answers = writable([])
+export const answers = writable([]);
+
+export const response = writable('');
 
 export const result: SendResult = {
-    name: '',
-    ans_1: '',
-    ans_2: '',
-    ans_3: '',
-    ans_4: '',
-    ans_5: '',
-    ans_6: '',
-    ans_7: '',
-    ans_8: '',
-    ans_9: '',
-    ans_10: ''
+	name: '',
+	ans_1: '',
+	ans_2: '',
+	ans_3: '',
+	ans_4: '',
+	ans_5: '',
+	ans_6: '',
+	ans_7: '',
+	ans_8: '',
+	ans_9: '',
+	ans_10: ''
 };
 
 export const lang = writable('th' || 'en');
