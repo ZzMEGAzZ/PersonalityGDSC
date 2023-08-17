@@ -5,8 +5,8 @@
 	import Main from '../component/Main.svelte';
 	import Consent from '../component/Consent.svelte';
 	import Intro from '../component/Intro.svelte';
-	import { mode } from '../stores';
-	import { step } from '../stores';
+	import Result from '../component/Result.svelte';
+	import { mode, step } from '../stores';
 
 	$step = 0;
 
@@ -19,7 +19,11 @@
 		<Consent />
 	{:else if $mode == 'intro'}
 		<Intro />
-	{:else}
+	{:else if $mode == 'question'}
 		<QuestionFrom />
+	{:else if $mode == 'result'}
+		<Result />
+	{:else}
+		<Main />
 	{/if}
 </div>
