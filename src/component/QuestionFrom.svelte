@@ -84,7 +84,8 @@
 				body: JSON.stringify(result)
 			});
 			if (res.status === 200) {
-				console.log(res.result);
+				console.log(res);
+				$response = await res.json();
 				$mode = 'result';
 			} else {
 				console.log(res);
@@ -97,7 +98,7 @@
 
 <Header />
 <div class="relative w-[90%] h-[85dvh] flex flex-col items-center justify-center space-y-5 rounded-2xl border-4 tablet:border-[12px] border-MainGreen border-opacity-40">
-	<h1 class="text-4xl font-bold">{$step + 1}</h1>
+	<h1 class="text-4xl font-bold my-5">{$step + 1}</h1>
 	<div class="h-10 mx-auto w-[80dvw]">
 		<Progress {questionLen} />
 	</div>
