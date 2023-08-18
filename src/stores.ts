@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store';
 import type { Question, SendResult, Response, Role } from './types';
 
-// export const mode = writable('main' || 'consent' || 'intro' || 'question' || 'result');
-export const mode = writable('result');
+export const mode = writable('main' || 'consent' || 'intro' || 'question' || 'result');
+// export const mode = writable('result');
 export const step = writable(0);
 export const name = writable('');
 export const answers = writable([]);
