@@ -1,6 +1,5 @@
 <script>
-	import { lang, mode } from '../stores';
-	import Ribbin from '../Assets/IMG/Ribbin.png';
+	import { lang, mode, result } from '../stores';
 	import Header from './Header.svelte';
 	let next = false;
 </script>
@@ -21,10 +20,10 @@
 		<div class="flex flex-col justify-center items-center leading-6">
 			{#if $lang == 'th'}
 				<div class="w-full h-full kanit">
-					<p class="kanit text-2xl tablet:4xl text-center leading-10">ในช่วงปิดเทอมซัมเมอร์ <br /> คุณ ... ต้องหาที่ฝึกงานตามหลักสูตร <br />  วันหนึ่งคุณ ... ถูกบริษัท GDSC เรียกสัมภาษณ์ <br /> คุณ ... ตื่นเต้นและดีใจเป็นอย่างมาก</p>
+					<p class="kanit text-2xl tablet:4xl text-center leading-10">ในช่วงปิดเทอมซัมเมอร์ <br /> คุณ {result.name} ต้องหาที่ฝึกงานตามหลักสูตร <br />  วันหนึ่งคุณ {result.name} ถูกบริษัท GDSC เรียกสัมภาษณ์ <br /> คุณ {result.name} ตื่นเต้นและดีใจเป็นอย่างมาก</p>
 				</div>
 			{:else}
-				<p class="text-2xl tablet:4xl text-center leading-10">In the summertime <br /> you ... want to find a internship,<br /> one day you been hired by GDSC company, <br /> you ... feel so excited.</p>
+				<p class="text-2xl tablet:4xl text-center leading-10">In the summertime <br /> {result.name} want to find a internship,<br /> one day you been hired by GDSC company, <br /> {result.name} feel so excited.</p>
 			{/if}
 			<button class="kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2" on:click={() => (next = true)}>{$lang === 'en' ? 'Next' : 'ถัดไป'}</button>
 		</div>

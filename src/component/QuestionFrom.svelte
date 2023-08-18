@@ -2,8 +2,8 @@
 	import Progress from './Progress.svelte';
 	import { questionsEn, questionsTH } from '../stores';
 	import { mode, step, answers, result, lang, response } from '../stores';
-	import Ribbin from '../Assets/IMG/Ribbin.png';
 	import Header from './Header.svelte';
+	import { json } from '@sveltejs/kit';
 
 	const questionLen = questionsEn.length;
 	$step = 0;
@@ -85,7 +85,9 @@
 			});
 			if (res.status === 200) {
 				console.log(res);
-				$response = await res.json();
+				const json = await res.json();
+				response.message = json.message;
+				response.result = json.result;
 				$mode = 'result';
 			} else {
 				console.log(res);
