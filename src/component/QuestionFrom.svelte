@@ -121,6 +121,7 @@
 					<button on:click={() => addAnswer('C')} class={`${$answers[$step] == 'C' && 'bg-MainGreen text-MainWhite ring-2 ring-offset-4 ring-MainYellow'} text-lg laptop:text-2xl text-center border-MainBlue border rounded-lg p-2 transition-all duration-500`}>C.{questionsTH[$step].answers[2]}</button>
 				</div>
 			{/if}
+
 			<div class="absolute bottom-0 left-0 w-full h-28 flex flex-row justify-center items-center space-x-5">
 				{#if $step == 0}
 					<button class="kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainWhite border border-MainGray rounded-xl text-MainGray m-2" on:click={() => ($mode = 'intro')}>{$lang === 'en' ? 'Previous' : 'กลับ'}</button>
@@ -128,7 +129,11 @@
 					<button class="kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainWhite border border-MainGray rounded-xl text-MainGray m-2" on:click={prev}>{$lang === 'en' ? 'Previous' : 'กลับ'}</button>
 				{/if}
 				{#if $step === questionLen - 1}
-					<button class={`${$answers.length !== 10 ? 'hidden' : 'bg-MainGreen'} kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8  rounded-xl text-MainWhite m-2`} on:click={() => submit()} disabled={$answers.length !== 10}>{$lang === 'en' ? 'Submit' : 'ส่งคำตอบ'}</button>
+					{#if $answers.includes(undefined) || $answers.length !== 10}
+						<p class="text-xl font-bold text-MainRed">โปรดเลือกคำตอบให้ครบ</p>
+					{:else}
+						<button class={`bg-MainGreen kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8  rounded-xl text-MainWhite m-2`} on:click={() => submit()} disabled={$answers.length !== 10}>{$lang === 'en' ? 'Submit' : 'ส่งคำตอบ'}</button>
+					{/if}
 				{:else}
 					<button class="kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8 bg-MainGreen rounded-xl text-MainWhite m-2" on:click={next}>{$lang === 'en' ? 'Next' : 'ถัดไป'}</button>
 				{/if}

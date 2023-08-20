@@ -89,6 +89,8 @@ def add_user():
         result = "Marketing"
     elif answer_counts["B"] + answer_counts["C"] >= 7:
         result = "Software Engineer/Developer"
+    elif answer_counts["A"] + answer_counts["C"] >= 7:
+        result = "Quality Assurance"
 
     with connect_to_database() as conn:
         cursor = conn.cursor()

@@ -89,7 +89,7 @@ const questionsTH: Question[] = [
 		answers: ['ชอบเป็นผู้นำและประสานงานกับทีม', 'ชอบทำงานร่วมกับทีม', 'ชอบทำงานเป็นคนเดียว']
 	},
 	{
-		question: 'คุุณอยากเห็นข้อมูลแบบไหนมากที่สุด ?',
+		question: 'คุณอยากเห็นข้อมูลแบบไหนมากที่สุด ?',
 		answers: ['ความคืบหน้าของงาน', 'ฟีดแบคจากคนอื่นๆ', 'ข้อมูลที่เราคาดไม่ถึง']
 	},
 	{
@@ -102,7 +102,7 @@ const questionsTH: Question[] = [
 	},
 	{
 		question: 'หากต้องทำงานเป็นทีม คุณเป็นคนแบบไหน ?',
-		answers: ['คอยจัดการและประสานงานกับทุกคนในทีม', 'ดีไซน์โภชนา จะให้ออกแบบอะไรส่งมาเลย', 'หาข้อมูลมาช่วยทีมตัดสินใจ']
+		answers: ['คอยจัดการและประสานงานกับทุกคนในทีม', 'นักออกแบบ จะให้ออกแบบอะไรส่งมาเลย', 'หาข้อมูลมาช่วยทีมตัดสินใจ']
 	},
 	{
 		question: 'คุณรูุ้สึกอย่างไรเวลาพรีเซนต์งาน ?',
@@ -119,41 +119,49 @@ const roles: Role[] = [
 	{
 		role: 'Project Manager',
 		detail: {
-			detailEN: 'Project Manager is responsible for planning, overseeing and leading projects from ideation through to completion. This is a senior role at an organization and requires interaction with a range of internal and external stakeholders, most often managing several moving project parts simultaneously.',
-			detailTH: 'ผู้จัดการโครงการรับผิดชอบในการวางแผน ดูแล และนำโครงการตั้งแต่การคิดค้นไอเดีย จนถึงการสร้างสรรค์ผลงาน นี่เป็นตำแหน่งที่สูงในองค์กร และต้องมีการปฏิสัมพันธ์กับผู้เกี่ยวข้องภายในและภายนอก โดยมักจะจัดการหลายๆโครงการพร้อมกัน',
-			img: 'https://www.ajarn.com/media/k2/items/cache/0c0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b_XL.jpg'
+			detailEN: 'Project Manager is responsible for leading the team, managing resources and managing the existing project budget. Plan work to achieve project goals and make the project successful.',
+			detailTH: 'ผู้นำในการดูแลสมาชิกในทีม ดูแลทรัพยากรและดูแลงบประมาณโครงการที่มีอยู่ วางแผนการทำงานเพื่อให้บรรลุเป้าหมายของโครงการและทำให้โครงการประสบความสำเร็จ',
+			img: 'src/Assets/IMG/project_manager.png'
 		}
 	},
 	{
 		role: 'UX/UI Designer',
 		detail: {
-			detailEN: 'UX/UI Designer is responsible for creating the design and layout of a website or web pages. It and can mean working on a brand new website or updating an already existing site. Their role is different to web developers, who specialise in making web designs a reality or writing code that dictates how different parts of the website fit together.',
-			detailTH: 'นักออกแบบ UX/UI รับผิดชอบในการสร้างการออกแบบและเค้าโครงของเว็บไซต์หรือหน้าเว็บ และสามารถหมายถึงการทำงานกับเว็บไซต์ใหม่หรือการอัพเดทเว็บไซต์ที่มีอยู่แล้ว บทบาทของพวกเขาแตกต่างจากนักพัฒนาเว็บ ซึ่งเชี่ยวชาญในการทำให้การออกแบบเว็บเป็นจริงหรือเขียนโค้ดที่กำหนดวิธีการทำงานของส่วนต่างๆของเว็บไซต์',
-			img: 'https://www.ajarn.com/media/k2/items/cache/0c0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b_XL.jpg'
+			detailEN: 'UX/UI Designer is responsible for creating a good user experience for Digital Product users through beautiful and easy-to-use design communication.',
+			detailTH: 'นักออกแบบประสบการณ์ที่ดีให้กับผู้ใช้งาน Digital Product ต่าง ๆโดยสื่อสารผ่านการออกแบบที่สวยงาม และใช้งานง่าย',
+			img: 'src/Assets/IMG/ux_ui'
 		}
 	},
 	{
-		role: 'Data Analyst',
+		role: 'Data Scientist/Analyst',
 		detail: {
-			detailEN: 'Data Analyst is responsible for collecting, processing and performing statistical analyses of data. Their skills may not be as advanced as data scientists (e.g. they may not be able to create new algorithms), but their goals are the same – to discover how data can be used to answer questions and solve problems.',
-			detailTH: 'นักวิเคราะห์ข้อมูลรับผิดชอบในการเก็บรวบรวม ประมวลผล และวิเคราะห์ข้อมูลทางสถิติ ทักษะของพวกเขาอาจไม่ได้เทียบเท่ากับนักวิทยาศาสตร์ข้อมูล (เช่นพวกเขาอาจจะไม่สามารถสร้างอัลกอริทึมใหม่ได้) แต่เป้าหมายของพวกเขาเหมือนกัน - ค้นพบว่าข้อมูลสามารถใช้เพื่อตอบคำถามและแก้ปัญหาได้อย่างไร',
-			img: 'https://www.ajarn.com/media/k2/items/cache/0c0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b_XL.jpg'
+			detailEN: 'Data Scientist is responsible for collecting, processing and performing statistical analyses of data. Their skills may not be as advanced as data scientists (e.g. they may not be able to create new algorithms), but their goals are the same – to discover how data can be used to answer questions and solve problems.',
+			detailTH: 'นักวิทยาศาสตร์ข้อมูลผู้เชี่ยวชาญที่ทำหน้าที่รวบรวมและนำข้อมูลต่าง ๆ หรือBig Data ที่มีมาวิเคราะห์โดยใช้เทคนิคขั้นสูงเพื่อหา Insight หรือข้อมูลเชิงลึกที่ซ่อนอยู่',
+			img: 'src/Assets/IMG/data_sciencetist.png'
 		}
 	},	
 	{	
-		role: 'Full Stack Developer',
+		role: 'Marketing',
 		detail: {
-			detailEN: 'Full Stack Developer is responsible for developing and designing front end web architecture, ensuring the responsiveness of applications and working alongside graphic designers for web design features, among other duties. Full Stack Developers will be required to see out a project from conception to final product, requiring good organizational skills and attention to detail.',
-			detailTH: 'นักพัฒนาฟูลสแต็กรับผิดชอบในการพัฒนาและออกแบบโครงสร้างเว็บด้านหน้า ให้แอปพลิเคชันตอบสนองได้ และทำงานร่วมกับนักออกแบบกราฟิกสำหรับคุณสมบัติการออกแบบเว็บไซต์ นอกจากนี้ยังมีหน้าที่อื่นๆอีกมากมาย นักพัฒนาฟูลสแต็กจะต้องดูแลโครงการตั้งแต่แรกเริ่มจนถึงผลงานสุดท้าย ซึ่งต้องใช้ทักษะการจัดการที่ดีและใส่ใจกับรายละเอียด',
-			img: 'https://www.ajarn.com/media/k2/items/cache/0c0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b_XL.jpg'
+			detailEN: 'Marketing is responsible for creating and implementing marketing strategies and campaigns to promote the brand of the product or increase sales for the organization.',
+			detailTH: 'นักการตลาดมีหน้าที่ในการสร้างและปฏิบัติกลยุทธ์และแคมเปญการตลาด เพื่อส่งเสริมภาพลักษณ์ของแบรนด์ผลิตภัณฑ์หรือเพิ่มยอดขายให้องค์กร',
+			img: 'src/Assets/IMG/marketing.png'
 		}
 	},
 	{
-		role: 'Data Scientist',
+		role: 'Software Engineer/Developer',
 		detail: {
 			detailEN: 'Data Scientist is responsible for collecting, processing and performing statistical analyses of data. Their skills may not be as advanced as data scientists (e.g. they may not be able to create new algorithms), but their goals are the same – to discover how data can be used to answer questions and solve problems.',
-			detailTH: 'นักวิทยาศาสตร์ข้อมูลรับผิดชอบในการเก็บรวบรวม ประมวลผล และวิเคราะห์ข้อมูลทางสถิติ ทักษะของพวกเขาอาจไม่ได้เทียบเท่ากับนักวิทยาศาสตร์ข้อมูล (เช่นพวกเขาอาจจะไม่สามารถสร้างอัลกอริทึมใหม่ได้) แต่เป้าหมายของพวกเขาเหมือนกัน - ค้นพบว่าข้อมูลสามารถใช้เพื่อตอบคำถามและแก้ปัญหาได้อย่างไร',
-			img: 'https://www.ajarn.com/media/k2/items/cache/0c0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b_XL.jpg'
+			detailTH: 'คนที่สามารถนำโปรแกรมต่าง ๆ เข้ามาประยุกต์กับการทำงานได้อย่างมีประสิทธิภาพผสานกับความสามารถในการพัฒนาระบบเพื่อช่วยเรื่อการประเมินคุณภาพและปฏิบัติการภายในองค์กร',
+			img: 'src/Assets/IMG/project_manager.png'
+		}
+	},
+	{
+		role: 'Quality Assurance',
+		detail: {
+			detailEN: 'Quality Assurance is a position that is designed and defined to increase customer confidence and build credibility for the company or organization. At the same time, it improves work processes and enables the company to compete better with others.',
+			detailTH: 'เป็นตำแหน่งที่ถูกออกแบบและกำหนดมาเพื่อเพิ่มความเชื่อมั่นให้กับลูกค้าและสร้างความน่าเชื่อถือให้กับบริษัทหรือองค์กร และในขณะเดียวกันก็คอยปรับปรุงกระบวนการการทำงานและให้บริษัทสามารถแข่งขันกับผู้อื่นได้ดียิ่งขึ้น',
+			img: 'src/Assets/IMG/Quality_Assurance.png'
 		}
 	}
 ]
