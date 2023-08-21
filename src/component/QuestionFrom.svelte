@@ -76,14 +76,14 @@
 		//post to backend
 		console.log(result);
 		try {
-			const res = await fetch('http://171.6.161.183:3000/add-user', {
+			const res = await fetch('http://171.6.161.183:5000/add-user', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify(result)
 			});
-			if (res.status === 200) {
+			if (res.status === 201) {
 				console.log(res);
 				const json = await res.json();
 				response.message = json.message;
