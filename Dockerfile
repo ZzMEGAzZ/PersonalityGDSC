@@ -1,5 +1,5 @@
 # สร้าง image สำหรับการ build แอปฯ
-FROM node:18 AS builder
+FROM node:18 
 
 WORKDIR /app
 
@@ -8,15 +8,6 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# สร้าง image สำหรับการ serve แอปฯ
-FROM nginx:alpine
+EXPOSE 3000
 
-# คัดลอก output จากการ build ไปยังไดเร็กทอรีของ nginx
-COPY --from=builder /app/build /usr/share/nginx/html
-
-# คัดลอกไฟล์ configuration ของ nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node" , "/app/build/index.js"]
