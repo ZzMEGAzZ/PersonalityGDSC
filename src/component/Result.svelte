@@ -39,7 +39,7 @@
 		<h1 class="kanit text-xl font-bold">{$lang === 'th' ? 'หากคุณสนใจในเทคโนโลยี' : 'If you are interested in technology'}</h1>
 		<h1 class="kanit text-xl font-bold">{$lang === 'th' ? 'และมีใจรักในการแบ่งปันความรู้' : 'and have a passion for sharing knowledge'}</h1>
 		<h1 class="kanit p-2 bg-MainRed text-MainWhite rounded-2xl">{$lang === 'th' ? 'ไม่จำเป็นต้องเขียนโค้ดเป็นก็ได้' : 'You don’t have to code'}</h1>
-		<h1 class="kanit text-4xl font-bold">{$lang === 'th' ? 'เข้ามาร่วมเป็นส่วนหนึ่งของ GDSC TU' : 'Join us at GDSC TU'}</h1>
+		<h1 class="kanit text-4xl font-bold text-center">{$lang === 'th' ? 'เข้ามาร่วมเป็นส่วนหนึ่งของ GDSC TU' : 'Join us at GDSC TU'}</h1>
 		<button class="w-max h-max p-3 rounded-3xl border bg-MainWhite drop-shadow-xl">
 			<a href="https://forms.gle/3PAXBfAuJaqgDunx5" target="_blank" class="flex items-center space-x-2">
 				<div class="w-10 h-10 tablet:w-20 tablet:h-20 space-x-2"><GdscSvg /></div>
