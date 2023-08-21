@@ -1,5 +1,11 @@
 import { writable } from 'svelte/store';
 import type { Question, SendResult, Response, Role } from './types';
+import pm from './Assets/IMG/project_manager.png';
+import ux from './Assets/IMG/ux_ui.png';
+import ds from './Assets/IMG/data_sciencetist.png';
+import marketing from './Assets/IMG/marketing.png';
+import se from './Assets/IMG/software_engineer.png';
+import qa from './Assets/IMG/Quality_Assurance.png';
 
 export const mode = writable('main' || 'consent' || 'intro' || 'question' || 'result');
 // export const mode = writable('result');
@@ -121,7 +127,7 @@ const roles: Role[] = [
 		detail: {
 			detailEN: 'Project Manager is responsible for leading the team, managing resources and managing the existing project budget. Plan work to achieve project goals and make the project successful.',
 			detailTH: 'ผู้นำในการดูแลสมาชิกในทีม ดูแลทรัพยากรและดูแลงบประมาณโครงการที่มีอยู่ วางแผนการทำงานเพื่อให้บรรลุเป้าหมายของโครงการและทำให้โครงการประสบความสำเร็จ',
-			img: 'src/Assets/IMG/project_manager.png'
+			img: pm
 		}
 	},
 	{
@@ -129,7 +135,7 @@ const roles: Role[] = [
 		detail: {
 			detailEN: 'UX/UI Designer is responsible for creating a good user experience for Digital Product users through beautiful and easy-to-use design communication.',
 			detailTH: 'นักออกแบบประสบการณ์ที่ดีให้กับผู้ใช้งาน Digital Product ต่าง ๆโดยสื่อสารผ่านการออกแบบที่สวยงาม และใช้งานง่าย',
-			img: 'src/Assets/IMG/ux_ui'
+			img: ux
 		}
 	},
 	{
@@ -137,7 +143,7 @@ const roles: Role[] = [
 		detail: {
 			detailEN: 'Data Scientist is responsible for collecting, processing and performing statistical analyses of data. Their skills may not be as advanced as data scientists (e.g. they may not be able to create new algorithms), but their goals are the same – to discover how data can be used to answer questions and solve problems.',
 			detailTH: 'นักวิทยาศาสตร์ข้อมูลผู้เชี่ยวชาญที่ทำหน้าที่รวบรวมและนำข้อมูลต่าง ๆ หรือBig Data ที่มีมาวิเคราะห์โดยใช้เทคนิคขั้นสูงเพื่อหา Insight หรือข้อมูลเชิงลึกที่ซ่อนอยู่',
-			img: 'src/Assets/IMG/data_sciencetist.png'
+			img: ds
 		}
 	},	
 	{	
@@ -145,7 +151,7 @@ const roles: Role[] = [
 		detail: {
 			detailEN: 'Marketing is responsible for creating and implementing marketing strategies and campaigns to promote the brand of the product or increase sales for the organization.',
 			detailTH: 'นักการตลาดมีหน้าที่ในการสร้างและปฏิบัติกลยุทธ์และแคมเปญการตลาด เพื่อส่งเสริมภาพลักษณ์ของแบรนด์ผลิตภัณฑ์หรือเพิ่มยอดขายให้องค์กร',
-			img: 'src/Assets/IMG/marketing.png'
+			img: marketing
 		}
 	},
 	{
@@ -153,7 +159,7 @@ const roles: Role[] = [
 		detail: {
 			detailEN: 'Data Scientist is responsible for collecting, processing and performing statistical analyses of data. Their skills may not be as advanced as data scientists (e.g. they may not be able to create new algorithms), but their goals are the same – to discover how data can be used to answer questions and solve problems.',
 			detailTH: 'คนที่สามารถนำโปรแกรมต่าง ๆ เข้ามาประยุกต์กับการทำงานได้อย่างมีประสิทธิภาพผสานกับความสามารถในการพัฒนาระบบเพื่อช่วยเรื่อการประเมินคุณภาพและปฏิบัติการภายในองค์กร',
-			img: 'src/Assets/IMG/project_manager.png'
+			img: se
 		}
 	},
 	{
@@ -161,7 +167,7 @@ const roles: Role[] = [
 		detail: {
 			detailEN: 'Quality Assurance is a position that is designed and defined to increase customer confidence and build credibility for the company or organization. At the same time, it improves work processes and enables the company to compete better with others.',
 			detailTH: 'เป็นตำแหน่งที่ถูกออกแบบและกำหนดมาเพื่อเพิ่มความเชื่อมั่นให้กับลูกค้าและสร้างความน่าเชื่อถือให้กับบริษัทหรือองค์กร และในขณะเดียวกันก็คอยปรับปรุงกระบวนการการทำงานและให้บริษัทสามารถแข่งขันกับผู้อื่นได้ดียิ่งขึ้น',
-			img: 'src/Assets/IMG/Quality_Assurance.png'
+			img: qa
 		}
 	}
 ]
