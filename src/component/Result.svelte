@@ -22,7 +22,7 @@
 	<div class="flex flex-col items-center justify-center space-y-2">
 
 		{#if response.result}
-		<h1 class="text-lg tablet:text-2xl">{$lang === 'en' ? `${result.name} are` : `คุณ ${result.name} คือ`}</h1>
+		<h1 class="kanit text-lg tablet:text-2xl">{$lang === 'en' ? `${result.name} are` : `คุณ ${result.name} คือ`}</h1>
 		<h1 class="text-xl tablet:text-4xl font-bold">{response.result}</h1>
 		{/if}
 
@@ -31,16 +31,16 @@
 				<div class="flex flex-col items-center justify-center space-y-2">
 					<img src={role.detail.img} alt={role.role} class="w-[90%]" />
 					<div class="w-[90%] border bg-MainWhite p-3 rounded-2xl drop-shadow-lg">
-						<p class="text-xl">{$lang === 'en' ? role.detail.detailEN : role.detail.detailTH}</p>
+						<p class="kanit  text-xl">{$lang === 'en' ? role.detail.detailEN : role.detail.detailTH}</p>
 					</div>
 				</div>
 			{/if}
 		{/each}
 
-		<h1 class="text-xl font-bold">หากคุณสนใจในเทคโนโลยี</h1>
-		<h1 class="text-xl font-bold">และมีใจรักในการแบ่งปันความรู้</h1>
-		<h1 class="p-2 bg-MainRed text-MainWhite rounded-2xl">ไม่จำเป็นต้องเขียนโค้ดเป็นก็ได้</h1>
-		<h1 class="text-4xl font-bold">เข้ามาร่วมกับเรา</h1>
+		<h1 class="kanit text-xl font-bold">หากคุณสนใจในเทคโนโลยี</h1>
+		<h1 class="kanit text-xl font-bold">และมีใจรักในการแบ่งปันความรู้</h1>
+		<h1 class="kanit p-2 bg-MainRed text-MainWhite rounded-2xl">ไม่จำเป็นต้องเขียนโค้ดเป็นก็ได้</h1>
+		<h1 class="kanit text-4xl font-bold">เข้ามาร่วมกับเรา</h1>
 		<button class="w-max h-max p-3 rounded-3xl border bg-MainWhite drop-shadow-xl">
 			<a href="https://forms.gle/3PAXBfAuJaqgDunx5" target="_blank" class="flex items-center space-x-2">
 				<div class="w-10 h-10 tablet:w-20 tablet:h-20 space-x-2"><GdscSvg /></div>
@@ -51,7 +51,7 @@
 				</div>
 			</a>
 		</button>
-		<h1 class="text-2xl font-bold">หรือติดตามเราได้ที่</h1>
+		<h1 class="kanit  text-2xl font-bold">หรือติดตามเราได้ที่</h1>
 		<div class="flex flex-col space-y-5">
 			<button class="w-full pr-1 h-max bg-[#EF9A9A] rounded-xl">
 				<a href="https://www.instagram.com/gdsc.tu/" target="_blank" class="flex items-center space-x-2">
