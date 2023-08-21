@@ -130,7 +130,7 @@
 				{/if}
 				{#if $step === questionLen - 1}
 					{#if $answers.includes(undefined) || $answers.length !== 10}
-						<p class="text-xl font-bold text-MainRed">โปรดเลือกคำตอบให้ครบ</p>
+						<p class="text-xl font-bold text-MainRed">{$lang === 'en' ? 'Please answer all questions' : 'มาตอบให้ครบกันเถอะ'}</p>
 					{:else}
 						<button class={`bg-MainGreen kanit text-2xl tablet:text-3xl py-1 px-6 tablet:py-2 tablet:px-8  rounded-xl text-MainWhite m-2`} on:click={() => submit()} disabled={$answers.length !== 10}>{$lang === 'en' ? 'Submit' : 'ส่งคำตอบ'}</button>
 					{/if}
