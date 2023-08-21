@@ -1,7 +1,6 @@
 <script>
 	import bg from '../Assets/IMG/bg.png';
 	import { mode, result, lang, name, response, roles } from '../stores';
-	import img from '../Assets/IMG/ux_ui.png';
 	import Facebook from '../Assets/SVG/Facebook.svelte';
 	import Ig from '../Assets/SVG/Ig.svelte';
 	import Discord from '../Assets/SVG/Discord.svelte';
@@ -18,7 +17,7 @@
 	class="-z-50 fixed w-full h-[100dvh] space-y-5 flex flex-col justify-center items-center"
 />
 
-<div class="relative w-full h-full flex flex-col items-center space-y-5 py-5 my-5">
+<div class="relative w-full h-full flex flex-col items-center space-y-5 py-5 px-2 my-5">
 	<div class="flex flex-col items-center justify-center space-y-2">
 
 		{#if response.result}

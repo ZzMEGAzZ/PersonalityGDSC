@@ -74,7 +74,7 @@
 
 	async function submit() {
 		//post to backend
-		console.log(result);
+		// console.log(result);
 		try {
 			const res = await fetch('http://171.6.161.183:5000/add-user', {
 				method: 'POST',
@@ -84,16 +84,16 @@
 				body: JSON.stringify(result)
 			});
 			if (res.status === 201) {
-				console.log(res);
+				// console.log(res);
 				const json = await res.json();
 				response.message = json.message;
 				response.result = json.result;
 				$mode = 'result';
 			} else {
-				console.log(res);
+				// console.log(res);
 			}
 		} catch (error) {
-			console.log(error);
+			// console.log(error);
 		}
 	}
 </script>
