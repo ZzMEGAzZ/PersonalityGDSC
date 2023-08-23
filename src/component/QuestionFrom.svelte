@@ -76,7 +76,7 @@
 		//post to backend
 		// console.log(result);
 		try {
-			const res = await fetch('http://171.6.161.183:5000/add-user', {
+			const res = await fetch('http://171.6.130.10:3000/add-user', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
